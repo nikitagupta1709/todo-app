@@ -4,25 +4,28 @@ import { BsListTask } from 'react-icons/bs'
 import { ImOffice } from 'react-icons/im'
 import { MdDevicesOther } from 'react-icons/md'
 import { FiLogOut } from 'react-icons/fi'
+import { NavLink } from 'react-router-dom'
 
 export const SideNavbar = () => {
   return (
     <div className='sidebar'>
-      <div className='sidebarLogo'>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS94Hx7mznKUuJChS2soZ-BM78fp1b-Qv8yhA&usqp=CAU" alt=""/>
-        <h2>Todo bar</h2>
-      </div>
+      <NavLink to="/" className="linkLogo">
+        <div className='sidebarLogo'>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS94Hx7mznKUuJChS2soZ-BM78fp1b-Qv8yhA&usqp=CAU" alt=""/>
+          <h2>Todo bar</h2>
+        </div>
+      </NavLink>
       <div className='sidebarList'>
         <ul >
-          <li> <FaUserAlt /> Profile </li>
-          <li> <BsListTask/> All Tasks num</li>
-          <li> <FaHouseUser/> Personal num</li>
-          <li> <ImOffice/> Official num</li>
-          <li> <MdDevicesOther /> Others num</li>
-          <li> <FiLogOut /> LogOut/Login</li>
+          <li> <NavLink className="link" to="/profile" ><FaUserAlt /> Profile </NavLink></li>
+          <li> <NavLink className="link"><BsListTask/> All Tasks num </NavLink></li>
+          <li> <NavLink className="link"><FaHouseUser/> Personal num </NavLink></li>
+          <li> <NavLink className="link"><ImOffice/> Official num </NavLink></li>
+          <li> <NavLink className="link"><MdDevicesOther /> Others num </NavLink></li>
+          <li> <NavLink className="link"><FiLogOut /> LogOut/Login </NavLink></li>
         </ul>
       </div>
-
+      
     </div>
   )
 }
