@@ -1,9 +1,14 @@
 import './App.css';
+import { AllRoutes } from './components/routes/AllRoutes';
+import { SideNavbar } from './components/sideNavbar/SideNavbar';
 
 function App() {
   return (
-    <div className="App">
-      TODO App
+    <div className="app">
+      <div className='mainDiv'>
+        <SideNavbar />
+        <AllRoutes />
+      </div>
     </div>
   );
 }

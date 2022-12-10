@@ -1,3 +1,14 @@
-.App {
-  text-align: center;
+.app{
+  background: #ececef;
+  height:100vh;
+  display: flex;
+}
+.mainDiv{
+  width: 85%;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 30px;
+  height:90%;
+  display: flex;
+  align-items: center;
 }

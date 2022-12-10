@@ -2,6 +2,6 @@ import './AllRoutes.css'
 
 export const AllRoutes = () => {
   return (
-    <div>AllRoutes</div>
+    <div className='routes'>AllRoutes</div>
   )
 }
