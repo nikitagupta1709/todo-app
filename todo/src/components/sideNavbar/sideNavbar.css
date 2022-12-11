@@ -60,7 +60,7 @@
     color: #ccc;
     background-color: rgb(42, 41, 41);
 }
-.sidebarList>ul>li:active{
+.sidebarList>ul>li:active:active{
     color: #ccc;
     background-color: rgb(42, 41, 41);
 }
