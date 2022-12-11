@@ -10,9 +10,6 @@ export const AllRoutes = () => {
     <Routes>
       <Route path="/" element={<Home />}>Home</Route>
       <Route path="/profile" element={<Profile />}>Profile</Route>
-      {/* <Route to="/allTask" element={<Profile />}>Profile</Route> */}
-      {/* <Route to="/profile" element={<Profile />}>Profile</Route> */}
-      {/* <Route to="/profile" element={<Profile />}>Profile</Route> */}
       <Route path="/login" element={<Login />}>Login</Route>
       <Route path="/register" element={<Register />}>Register</Route>
     </Routes>

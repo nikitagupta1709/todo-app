@@ -1,11 +1,17 @@
 import axios from "axios";
 
 export const LOGIN = "LOGIN";
+export const LOGOUT = "LOGOUT";
 
 export const login = (token,user)=>(
     {
         type: LOGIN,
         payload:{"token":token, "user":user}
+    }
+)
+export const logout = ()=>(
+    {
+        type: LOGOUT
     }
 )
 

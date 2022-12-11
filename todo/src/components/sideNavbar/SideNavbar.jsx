@@ -3,12 +3,22 @@ import { FaUserAlt, FaHouseUser } from 'react-icons/fa'
 import { BsListTask } from 'react-icons/bs'
 import { ImOffice } from 'react-icons/im'
 import { MdDevicesOther } from 'react-icons/md'
-import { FiLogOut } from 'react-icons/fi'
+import { FiLogOut } from 'react-icons/fi' 
 import { NavLink } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { logout } from '../../redux/Auth/action'
 
 export const SideNavbar = () => {
-  const {loggedInUser} = useSelector((state)=>state)
+  let { loggedInUser } = useSelector((state)=>state)
+  const dispatch = useDispatch();
+
+  const handleLogOut = () => {
+    localStorage.setItem("token", null);
+    localStorage.setItem("loggedInUser", null);
+    alert("You have been looged out")
+    dispatch(logout());
+    window.location.replace("/");
+  }
 
   return (
 
@@ -27,7 +37,7 @@ export const SideNavbar = () => {
           <li> <NavLink className="link"><ImOffice/> Official num </NavLink></li>
           <li> <NavLink className="link"><MdDevicesOther /> Others num </NavLink></li>
           { loggedInUser 
-            ? <li> <NavLink className="link login"><FiLogOut /> Logout </NavLink></li> 
+            ? <li> <NavLink className="link login" onClick={handleLogOut}><FiLogOut /> Logout </NavLink></li> 
             : <li> <NavLink className="link login" to="/login"><FiLogOut /> Login </NavLink></li> 
           }
         </ul>
