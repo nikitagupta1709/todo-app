@@ -40,11 +40,11 @@
 }
 .sidebarList>ul>li{
     list-style: none;
+    border-radius: 10px;
 }
 .link{
     list-style: none;
     border-radius: 10px;
-    /* border: 1px solid black; */
     text-decoration: none;
     cursor: pointer;
     margin-top: 20px;
@@ -65,8 +65,13 @@
     background-color: rgb(42, 41, 41);
 }
 .sidebarList>ul>li:last-child{
-    background-color:cadetblue;
-    color: rgb(44, 43, 43);
+    background-color: #5876d8; 
+    border-radius: 10px;  
+}
+.login{
+    border-radius: 10px;
+    color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .sidebarList>ul>li:last-child:hover{
     color: #ccc;

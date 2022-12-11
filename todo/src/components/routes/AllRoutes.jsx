@@ -1,16 +1,18 @@
 import { Route, Routes } from 'react-router-dom'
 import { Home } from '../../pages/Home/Home'
+import { Login } from '../../pages/Login/Login'
 import { Profile } from '../../pages/Profile'
 import './AllRoutes.css'
 
 export const AllRoutes = () => {
   return (
     <Routes>
-      <Route to="/" element={<Home />}>Home</Route>
-      <Route to="/profile" element={<Profile />}>Profile</Route>
-      <Route to="/allTask" element={<Profile />}>Profile</Route>
-      <Route to="/profile" element={<Profile />}>Profile</Route>
-      <Route to="/profile" element={<Profile />}>Profile</Route>
+      <Route path="/" element={<Home />}>Home</Route>
+      <Route path="/profile" element={<Profile />}>Profile</Route>
+      {/* <Route to="/allTask" element={<Profile />}>Profile</Route> */}
+      {/* <Route to="/profile" element={<Profile />}>Profile</Route> */}
+      {/* <Route to="/profile" element={<Profile />}>Profile</Route> */}
+      <Route path="/login" element={<Login />}>Login</Route>
     </Routes>
   )
 }

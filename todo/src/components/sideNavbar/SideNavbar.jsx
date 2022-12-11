@@ -26,8 +26,8 @@ export const SideNavbar = () => {
           <li> <NavLink className="link"><ImOffice/> Official num </NavLink></li>
           <li> <NavLink className="link"><MdDevicesOther /> Others num </NavLink></li>
           { user 
-            ? <li> <NavLink className="link"><FiLogOut /> Logout </NavLink></li> 
-            : <li> <NavLink className="link"><FiLogOut /> Login </NavLink></li> 
+            ? <li> <NavLink className="link login"><FiLogOut /> Logout </NavLink></li> 
+            : <li> <NavLink className="link login" to="/login"><FiLogOut /> Login </NavLink></li> 
           }
         </ul>
       </div>     
