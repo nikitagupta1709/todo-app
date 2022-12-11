@@ -5,9 +5,10 @@ import { ImOffice } from 'react-icons/im'
 import { MdDevicesOther } from 'react-icons/md'
 import { FiLogOut } from 'react-icons/fi'
 import { NavLink } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 export const SideNavbar = () => {
-  let user = false;
+  const {loggedInUser} = useSelector((state)=>state)
 
   return (
 
@@ -25,7 +26,7 @@ export const SideNavbar = () => {
           <li> <NavLink className="link"><FaHouseUser/> Personal num </NavLink></li>
           <li> <NavLink className="link"><ImOffice/> Official num </NavLink></li>
           <li> <NavLink className="link"><MdDevicesOther /> Others num </NavLink></li>
-          { user 
+          { loggedInUser 
             ? <li> <NavLink className="link login"><FiLogOut /> Logout </NavLink></li> 
             : <li> <NavLink className="link login" to="/login"><FiLogOut /> Login </NavLink></li> 
           }

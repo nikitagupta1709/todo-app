@@ -26,11 +26,13 @@ input,button{
     background-color: #5876d8;
     color: #fff;
     font-size: 18px;
+    cursor: pointer;
 }
 .forRegister{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .registerLink{
     text-decoration: none;

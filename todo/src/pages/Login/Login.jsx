@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { NavLink, useNavigate } from 'react-router-dom'
+import { getLogin } from '../../redux/Auth/action'
 import './login.css'
 
 const initState ={
@@ -8,16 +10,18 @@ const initState ={
 }
 export const Login = () => {
     const [user, setUser] = useState(initState)
-
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const handleChange = (e) =>{
         let {name, value} = e.target;
         setUser({...user, [name]:value });
     }
-    console.log(user, "user");
 
-    const handleSubmit = ()=>{
-
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        dispatch(getLogin(user))
+        navigate("/")
     }
   return (
     <div className='form' >

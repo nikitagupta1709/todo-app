@@ -1,6 +1,9 @@
 import './register.css'
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
+import {useDispatch } from 'react-redux';
+import { getRegister } from '../../redux/Auth/action';
+
 
 const initState ={
     name:"",
@@ -10,18 +13,28 @@ const initState ={
 
 export const Register = () => {
     const [user, setUser] = useState(initState)
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
 
     const handleChange = (e) =>{
         let {name, value} = e.target;
         setUser({...user, [name]:value });
     }
-    console.log(user, "user");
 
-    const handleSubmit = ()=>{
-
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        dispatch(getRegister(user))
+        // try {
+        //         let res = await axios.post("http://localhost:3050/auth/register", user)
+        //         console.log(res, "res");
+        //         alert(res.data.message);
+        //         navigate("/login");
+        // } catch (error) {
+        //         console.log(error.response.data.message)
+        // }
+        navigate("/login");
     }
-
     return (
         <div className='form' >
             <h1>REGISTER</h1>
