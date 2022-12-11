@@ -7,7 +7,10 @@ import { FiLogOut } from 'react-icons/fi'
 import { NavLink } from 'react-router-dom'
 
 export const SideNavbar = () => {
+  let user = false;
+
   return (
+
     <div className='sidebar'>
       <NavLink to="/" className="linkLogo">
         <div className='sidebarLogo'>
@@ -16,16 +19,19 @@ export const SideNavbar = () => {
         </div>
       </NavLink>
       <div className='sidebarList'>
-        <ul >
+        <ul>
           <li> <NavLink className="link" to="/profile" ><FaUserAlt /> Profile </NavLink></li>
           <li> <NavLink className="link"to="/"><BsListTask/> All Tasks num </NavLink></li>
           <li> <NavLink className="link"><FaHouseUser/> Personal num </NavLink></li>
           <li> <NavLink className="link"><ImOffice/> Official num </NavLink></li>
           <li> <NavLink className="link"><MdDevicesOther /> Others num </NavLink></li>
-          <li> <NavLink className="link"><FiLogOut /> LogOut/Login </NavLink></li>
+          { user 
+            ? <li> <NavLink className="link"><FiLogOut /> Logout </NavLink></li> 
+            : <li> <NavLink className="link"><FiLogOut /> Login </NavLink></li> 
+          }
         </ul>
-      </div>
-      
+      </div>     
     </div>
+
   )
 }
