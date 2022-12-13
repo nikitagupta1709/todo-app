@@ -15,7 +15,7 @@ export const Home = () => {
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    const [name, value] = e.target;
+    const {name, value} = e.target;
     setTask({...task, [name]:value});
   }
   console.log(task);
