@@ -2,7 +2,7 @@ import axios from 'axios'
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { BiEdit } from 'react-icons/bi'
+// import { BiEdit } from 'react-icons/bi'
 import { MdOutlineDoneAll, MdDelete } from 'react-icons/md'
 import { NavLink } from 'react-router-dom'
 import './allTask.css'
@@ -37,7 +37,7 @@ export const AllTask = () => {
                         <p>{count ++}</p>
                         <p>{tasks.name}</p>
                         <div className='icons' >
-                            <BiEdit />
+                            {/* <BiEdit /> */}
                             <MdOutlineDoneAll />
                             <MdDelete />
                         </div>
@@ -50,7 +50,7 @@ export const AllTask = () => {
             <p>{currentPage}</p>
             <button onClick={getNext}>Next</button>
         </div>
-        <NavLink><button className='progress'>Progress Page</button></NavLink>
+        <NavLink to="/progress"><button className='progress'>Progress Page</button></NavLink>
     </div>
   )
 }
