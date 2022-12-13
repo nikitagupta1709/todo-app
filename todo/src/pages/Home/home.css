@@ -6,3 +6,6 @@
     display: flex;
 
 }
+textarea{
+    border: 1px solid lightgray;
+}
