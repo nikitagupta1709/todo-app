@@ -1,37 +1,45 @@
 import React from 'react'
 import './done.css'
-import { MdDelete } from 'react-icons/md'
+import axios from 'axios';
 
-export const Progress = () => {
-    const [currentPage, setCurrentPage] = React.useState(1);
+export const Done = () => {
+    const [task, setTask] = React.useState([]);
+    // const [currentPage, setCurrentPage] = React.useState(1);
 
-    const getPrevious  = () => {
-        setCurrentPage(currentPage - 1)
-    }
-    const getNext  = () => {
-        setCurrentPage(currentPage + 1)
-    }
+    // const getPrevious  = () => {
+    //     setCurrentPage(currentPage - 1)
+    // }
+    // const getNext  = () => {
+    //     setCurrentPage(currentPage + 1)
+    // }
     var count = 1;
+    
+    React.useEffect(() => {
+        getTasks();
+    },[])
+
+    const getTasks = () =>{
+        axios.get(`http://localhost:3004/done`)
+        .then((res) => setTask(res.data))
+    }
 
   return (
     <div className='done'>
-        <h1>All Task</h1>
+        <h1> Task Done </h1>
         <div className='tasks'>
-            {/* {task.map((tasks) => ( */}
-                    <div className='container' >
+            {task.map((tasks) => (
+                    <div className='container' key={tasks.id}>
                         <p>{count ++}</p>
-                        <p>hi</p>
-                        <div className='icons' >
-                            <MdDelete />
-                        </div>
+                        <p>{tasks.name}</p>
                     </div>
-                {/* ))} */}
+                ))
+            }
         </div>
-        <div className='page'>
+        {/* <div className='page'>
             <button disabled={currentPage === 1} onClick={getPrevious}>Prev</button>
             <p>{currentPage}</p>
             <button onClick={getNext}>Next</button>
-        </div>
+        </div> */}
     </div>
   )
 }

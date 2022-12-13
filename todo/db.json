@@ -1,27 +1,6 @@
 {
   "tasks": [
     {
-      "name": "init",
-      "desc": "okok",
-      "date": "2022-12-02",
-      "category": "personal",
-      "id": 1
-    },
-    {
-      "name": "sleep",
-      "desc": "nnlblbb;kb;",
-      "date": "2022-12-30",
-      "category": "personal",
-      "id": 2
-    },
-    {
-      "name": "eat",
-      "desc": "dwdfefg",
-      "date": "2022-12-01",
-      "category": "personal",
-      "id": 3
-    },
-    {
       "name": "read",
       "desc": "dcfafvg",
       "date": "2022-12-23",
@@ -36,11 +15,43 @@
       "id": 5
     },
     {
-      "name": "lolo",
-      "desc": "skansclsdc",
-      "date": "2022-12-09",
+      "name": "sleep",
+      "desc": "savsva vfdv",
+      "date": "2022-12-03",
       "category": "personal",
       "id": 6
+    },
+    {
+      "name": "eat",
+      "desc": "sdvsavafsvsfvadfv ",
+      "date": "2022-12-22",
+      "category": "official",
+      "id": 7
+    }
+  ],
+  "progress": [
+    {
+      "name": "init",
+      "desc": "okok",
+      "date": "2022-12-02",
+      "category": "personal",
+      "id": 1
+    },
+    {
+      "name": "sleep",
+      "desc": "nnlblbb;kb;",
+      "date": "2022-12-30",
+      "category": "personal",
+      "id": 2
+    }
+  ],
+  "done": [
+    {
+      "name": "init",
+      "desc": "okok",
+      "date": "2022-12-02",
+      "category": "personal",
+      "id": 1
     }
   ]
 }

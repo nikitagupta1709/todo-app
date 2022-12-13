@@ -32,7 +32,7 @@ export const SideNavbar = () => {
       <div className='sidebarList'>
         <ul>
           <li> <NavLink className="link" to="/profile" ><FaUserAlt /> Profile </NavLink></li>
-          <li> <NavLink className="link"to="/"><BsListTask/> All Tasks num </NavLink></li>
+          <li> <NavLink className="link"to="/allTask"><BsListTask/> All Tasks num </NavLink></li>
           <li> <NavLink className="link"><FaHouseUser/> Personal num </NavLink></li>
           <li> <NavLink className="link"><ImOffice/> Official num </NavLink></li>
           <li> <NavLink className="link"><MdDevicesOther /> Others num </NavLink></li>
