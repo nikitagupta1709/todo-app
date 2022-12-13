@@ -1,0 +1,8 @@
+.home{
+    margin: auto;
+    border: 1px solid lightgray;
+}
+.task_updated{
+    display: flex;
+
+}
