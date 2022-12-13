@@ -19,6 +19,7 @@ export const SideNavbar = () => {
     dispatch(logout());
     window.location.replace("/");
   }
+  
 
   return (
 
@@ -33,9 +34,9 @@ export const SideNavbar = () => {
         <ul>
           <li> <NavLink className="link" to="/profile" ><FaUserAlt /> Profile </NavLink></li>
           <li> <NavLink className="link"to="/allTask"><BsListTask/> All Tasks num </NavLink></li>
-          <li> <NavLink className="link"><FaHouseUser/> Personal num </NavLink></li>
-          <li> <NavLink className="link"><ImOffice/> Official num </NavLink></li>
-          <li> <NavLink className="link"><MdDevicesOther /> Others num </NavLink></li>
+          <li> <NavLink className="link" to="/personal"><FaHouseUser/> Personal num </NavLink></li>
+          <li> <NavLink className="link" to="/official"><ImOffice/> Official num </NavLink></li>
+          <li> <NavLink className="link" to="/others"><MdDevicesOther /> Others num </NavLink></li>
           { loggedInUser 
             ? <li> <NavLink className="link login" onClick={handleLogOut}><FiLogOut /> Logout </NavLink></li> 
             : <li> <NavLink className="link login" to="/login"><FiLogOut /> Login </NavLink></li> 

@@ -1,6 +1,7 @@
 import React from 'react'
 import './done.css'
 import axios from 'axios';
+import { HiCheckCircle } from 'react-icons/hi'
 
 export const Done = () => {
     const [task, setTask] = React.useState([]);
@@ -31,7 +32,11 @@ export const Done = () => {
                     <div className='container' key={tasks.id}>
                         <p>{count ++}</p>
                         <p>{tasks.name}</p>
+                        <div className='icons' >
+                            <HiCheckCircle />
+                        </div>
                     </div>
+                    
                 ))
             }
         </div>

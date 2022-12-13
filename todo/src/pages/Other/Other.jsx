@@ -1,11 +1,9 @@
 import React from 'react'
-import './progress.css'
-import { MdOutlineDoneAll } from 'react-icons/md'
-import { NavLink } from 'react-router-dom';
-import axios from 'axios'
+import './other.css'
+import axios from 'axios';
+import { AiFillExclamationCircle } from 'react-icons/ai'
 
-
-export const Progress = () => {
+export const Other = () => {
     const [task, setTask] = React.useState([]);
     // const [currentPage, setCurrentPage] = React.useState(1);
 
@@ -16,34 +14,26 @@ export const Progress = () => {
     //     setCurrentPage(currentPage + 1)
     // }
     var count = 1;
+    
     React.useEffect(() => {
         getTasks();
     },[])
 
     const getTasks = () =>{
-        axios.get(`http://localhost:3004/progress`)
+        axios.get(`http://localhost:3004/tasks?category=others`)
         .then((res) => setTask(res.data))
     }
 
-    const handleDone = async (id) => {
-        let given = await axios.get(`http://localhost:3004/progress/${id}`)
-        console.log(given);
-        delete given.id;
-
-        await axios.post(`http://localhost:3004/done`, given.data)
-        .then((res)=>console.log(res))
-    }
-
   return (
-    <div className='progress'>
-        <h1>Task in progress</h1>
+    <div className='personal'>
+        <h1> Others Todos </h1>
         <div className='tasks'>
             {task.map((tasks) => (
                     <div className='container' key={tasks.id}>
                         <p>{count ++}</p>
                         <p>{tasks.name}</p>
                         <div className='icons' >
-                            <MdOutlineDoneAll onClick={() => handleDone(tasks.id) }/>
+                            <AiFillExclamationCircle />
                         </div>
                     </div>
                 ))
@@ -54,7 +44,6 @@ export const Progress = () => {
             <p>{currentPage}</p>
             <button onClick={getNext}>Next</button>
         </div> */}
-        <NavLink to="/done"><button className='done'>Done Page</button></NavLink>
     </div>
   )
 }
