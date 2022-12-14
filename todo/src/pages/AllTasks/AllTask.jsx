@@ -51,7 +51,7 @@ export const AllTask = () => {
             {task.map((tasks, index) => (
                     <div className='container' key={tasks.id}>
                         <p>{count ++}</p>
-                        <p>{tasks.name}</p>
+                        <NavLink to={`/single/${tasks.id}`}><p>{tasks.name}</p></NavLink>
                         <div className='icons' >
                             <MdOutlineDoneAll onClick={() => handleProgress(tasks.id) }/>
                             <MdDelete onClick={() => handleDelete(tasks.id, index) }/>

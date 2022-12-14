@@ -6,12 +6,9 @@
 h1{
     color: #a881af;
 }
-.task_updated{
-    display: flex;
-
-}
 .input{
     padding: 15px;
+    color: gray;
 }
 textarea{
     border: 1px solid lightgray;
@@ -20,6 +17,8 @@ textarea{
 .cat{
     padding: 15px;
     border-radius: 5px;
+    border: 1px solid lightgray;
+    color: gray;
 }
 .btn{
     color:white;

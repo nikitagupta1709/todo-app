@@ -25,6 +25,8 @@ export const AllRoutes = () => {
       <Route path="/official" element={<Official />}>Official</Route>
       <Route path="/login" element={<Login />}>Login</Route>
       <Route path="/register" element={<Register />}>Register</Route>
+      <Route path="/single/:id" element={<SingleTask/>}>Single</Route>
+
     </Routes>
   )
 }
