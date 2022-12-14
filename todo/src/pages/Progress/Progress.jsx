@@ -54,7 +54,7 @@ export const Progress = () => {
             <p>{currentPage}</p>
             <button onClick={getNext}>Next</button>
         </div> */}
-        <NavLink to="/done"><button className='done'>Done Page</button></NavLink>
+        <NavLink to="/done" className='progress'><button >Done Page</button></NavLink>
     </div>
   )
 }

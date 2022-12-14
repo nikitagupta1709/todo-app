@@ -19,7 +19,7 @@
 }
 .linkLogo{
     text-decoration: none;
-    color: #a881af;
+    color: mediumslateblue;
 }
 .sidebarLogo>img{
     width: 20%;
@@ -54,14 +54,14 @@
     justify-content: space-evenly;
     padding: 15px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    color:#a881af
+    color:mediumslateblue
 }
 .sidebarList>ul>li:hover{
-    color: #a881af;
+    color: mediumslateblue;
     background-color: rgb(42, 41, 41);
 }
 .sidebarList>ul>li:last-child{
-    background-color: #a881af; 
+    background-color: mediumslateblue; 
     border-radius: 10px;  
 }
 .login{

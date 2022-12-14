@@ -1,5 +1,5 @@
 import './sideNavbar.css'
-import { FaUserAlt, FaHouseUser } from 'react-icons/fa'
+import { FaHouseUser } from 'react-icons/fa'
 import { BsListTask } from 'react-icons/bs'
 import { ImOffice } from 'react-icons/im'
 import { MdDevicesOther } from 'react-icons/md'
@@ -32,11 +32,10 @@ export const SideNavbar = () => {
       </NavLink>
       <div className='sidebarList'>
         <ul>
-          <li> <NavLink className="link" to="/profile" ><FaUserAlt /> Profile </NavLink></li>
-          <li> <NavLink className="link"to="/allTask"><BsListTask/> All Tasks num </NavLink></li>
-          <li> <NavLink className="link" to="/personal"><FaHouseUser/> Personal num </NavLink></li>
-          <li> <NavLink className="link" to="/official"><ImOffice/> Official num </NavLink></li>
-          <li> <NavLink className="link" to="/others"><MdDevicesOther /> Others num </NavLink></li>
+          <li> <NavLink className="link"to="/allTask"><BsListTask/> All Tasks </NavLink></li>
+          <li> <NavLink className="link" to="/personal"><FaHouseUser/> Personal </NavLink></li>
+          <li> <NavLink className="link" to="/official"><ImOffice/> Official </NavLink></li>
+          <li> <NavLink className="link" to="/others"><MdDevicesOther /> Others </NavLink></li>
           { loggedInUser 
             ? <li> <NavLink className="link login" onClick={handleLogOut}><FiLogOut /> Logout </NavLink></li> 
             : <li> <NavLink className="link login" to="/login"><FiLogOut /> Login </NavLink></li> 

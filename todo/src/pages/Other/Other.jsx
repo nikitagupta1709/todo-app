@@ -2,6 +2,7 @@ import React from 'react'
 import './other.css'
 import axios from 'axios';
 import { AiFillExclamationCircle } from 'react-icons/ai'
+import { NavLink } from 'react-router-dom';
 
 export const Other = () => {
     const [task, setTask] = React.useState([]);
@@ -32,9 +33,11 @@ export const Other = () => {
                     <div className='container' key={tasks.id}>
                         <p>{count ++}</p>
                         <p>{tasks.name}</p>
-                        <div className='icons' >
-                            <AiFillExclamationCircle />
-                        </div>
+                        <NavLink to={`/single/${tasks.id}`}>
+                            <div className='icons' >
+                                <AiFillExclamationCircle />
+                            </div>
+                        </NavLink>
                     </div>
                 ))
             }

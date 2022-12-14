@@ -8,7 +8,7 @@ import './singleTask.css'
 export const SingleTask = () => {
   const[data, setData] = useState({});
   let {id} = useParams();
-  // console.log(id)
+
   useEffect(()=>{
     getData();
   },[])
@@ -20,10 +20,10 @@ export const SingleTask = () => {
   
   return (
     <div className='single'>
-        <h1>{data.name}</h1>
+        <h1 className='name'>{data.name}</h1>
         <div className='dates'>
-            <p>Date: {data.date} </p>
             <p>Category: {data.category}</p>
+            <p>Date: {data.date} </p>
         </div>
         <p>{data.desc}</p>
     </div>

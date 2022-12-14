@@ -15,6 +15,7 @@
 .container>p{
     margin-left: 10px;
     text-transform: capitalize;
+    color: black;
 }
 .icons{
     display: flex;
