@@ -1,11 +1,30 @@
 .home{
     margin: auto;
-    border: 1px solid lightgray;
+    /* border: 1px solid lightgray; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+h1{
+    color: #a881af;
 }
 .task_updated{
     display: flex;
 
 }
+.input{
+    padding: 15px;
+}
 textarea{
     border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.cat{
+    padding: 15px;
+    border-radius: 5px;
+}
+.btn{
+    color:white;
+    background-color:#a881af;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 15px;
 }

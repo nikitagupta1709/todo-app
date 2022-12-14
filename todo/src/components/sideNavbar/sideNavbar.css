@@ -19,7 +19,7 @@
 }
 .linkLogo{
     text-decoration: none;
-    color: rgb(105, 104, 104);
+    color: #a881af;
 }
 .sidebarLogo>img{
     width: 20%;
@@ -54,18 +54,14 @@
     justify-content: space-evenly;
     padding: 15px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    color: rgb(105, 104, 104);
+    color:#a881af
 }
 .sidebarList>ul>li:hover{
-    color: #ccc;
-    background-color: rgb(42, 41, 41);
-}
-.sidebarList>ul>li:active:active{
-    color: #ccc;
+    color: #a881af;
     background-color: rgb(42, 41, 41);
 }
 .sidebarList>ul>li:last-child{
-    background-color: #5876d8; 
+    background-color: #a881af; 
     border-radius: 10px;  
 }
 .login{

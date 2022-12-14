@@ -31,16 +31,16 @@ export const Home = () => {
     <div className='home'>
         <h1>Create a new task</h1>
         <form onSubmit={handleSubmit}>
-            <input type="text" name="name" value={task.name} placeholder="Enter Task Name" onChange={handleChange} required/>
-            <input type="date" name="date" value={task.date} required onChange={handleChange}/><br />
-            <select  id="" placeholder="Select" name="category" value={task.category} onChange={handleChange}required>
+            <input type="text" className='input' name="name" value={task.name} placeholder="Enter Task Name" onChange={handleChange} required/>
+            <input type="date" className='input' name="date" value={task.date} required onChange={handleChange}/><br />
+            <select  id="" className='cat' placeholder="Select" name="category" value={task.category} onChange={handleChange}required>
                 <option value="">Select Task Category</option>
                 <option value="personal">Personal</option>
                 <option value="official">Official</option>
                 <option value="others">Others</option>
             </select><br />
             <textarea rows="8" cols="50" placeholder="Task Description..." name="desc" value={task.desc} onChange={handleChange}required/>
-            <button type="submit">Create Task</button>
+            <button type="submit" className='btn'>Create Task</button>
         </form>
     </div>
   )
