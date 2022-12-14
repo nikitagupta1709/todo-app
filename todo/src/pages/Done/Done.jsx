@@ -25,13 +25,13 @@ export const Done = () => {
     }
 
   return (
-    <div className='done'>
+    <div className='allTask'>
         <h1> Task Done </h1>
         <div className='tasks'>
             {task.map((tasks) => (
                     <div className='container' key={tasks.id}>
                         <p>{count ++}</p>
-                        <p>{tasks.name}</p>
+                        <p color='black' className='name'>{tasks.name}</p>
                         <div className='icons' >
                             <HiCheckCircle />
                         </div>

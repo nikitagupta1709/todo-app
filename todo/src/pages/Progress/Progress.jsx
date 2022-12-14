@@ -35,15 +35,15 @@ export const Progress = () => {
     }
 
   return (
-    <div className='progress'>
+    <div className='allTask'>
         <h1>Task in progress</h1>
         <div className='tasks'>
             {task.map((tasks) => (
                     <div className='container' key={tasks.id}>
                         <p>{count ++}</p>
-                        <p>{tasks.name}</p>
+                        <p color='black' className='name'>{tasks.name}</p>
                         <div className='icons' >
-                            <MdOutlineDoneAll onClick={() => handleDone(tasks.id) }/>
+                            <MdOutlineDoneAll color='green' onClick={() => handleDone(tasks.id) }/>
                         </div>
                     </div>
                 ))

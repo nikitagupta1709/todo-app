@@ -51,10 +51,10 @@ export const AllTask = () => {
             {task.map((tasks, index) => (
                     <div className='container' key={tasks.id}>
                         <p>{count ++}</p>
-                        <NavLink to={`/single/${tasks.id}`}><p>{tasks.name}</p></NavLink>
+                        <NavLink to={`/single/${tasks.id}`} className='name'><p color='black'>{tasks.name}</p></NavLink>
                         <div className='icons' >
-                            <MdOutlineDoneAll onClick={() => handleProgress(tasks.id) }/>
-                            <MdDelete onClick={() => handleDelete(tasks.id, index) }/>
+                            <MdOutlineDoneAll color='green' onClick={() => handleProgress(tasks.id) }/>
+                            <MdDelete color='gray' onClick={() => handleDelete(tasks.id, index) }/>
                         </div>
                     </div>
                 ))
@@ -65,7 +65,7 @@ export const AllTask = () => {
             <p>{currentPage}</p>
             <button onClick={getNext}>Next</button>
         </div> */}
-        <NavLink to="/progress"><button className='progress'>Progress Page</button></NavLink>
+        <NavLink to="/progress" className='progress'><button >Progress Page</button></NavLink>
     </div>
   )
 }

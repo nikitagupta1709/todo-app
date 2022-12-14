@@ -1,19 +1,26 @@
-.done{
+*{
+    text-decoration: none;
+}
+
+.allTask{
     text-align: center;
     margin: auto;
     width: 60%;
 }
+.tasks{
+    border: none;
+}
 .tasks>div:nth-child(odd){
-    background-color:rgb(185, 220, 221);
+    background-color:rgb(202, 223, 224);
 }
 .container{
-    border: 1px solid black;
+    border: 1px solid blue;
     display: flex;
     justify-content: space-between;
     text-align: center;
 }
 .container>p{
-    margin-left: 10px;
+    color: black;
 }
 .icons{
     display: flex;
@@ -23,10 +30,18 @@
     margin-right: 15px;
     gap: 10px;
 }
-.done{
+.progress >button{
     float: left;
+    margin-top: 40px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
 }
- 
+.name{
+    color: black;
+    text-transform:capitalize;
+}
 .page{
     display: flex;
     align-items: center;
