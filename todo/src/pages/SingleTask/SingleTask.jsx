@@ -10,15 +10,21 @@ export const SingleTask = () => {
   let {id} = useParams();
 
   useEffect(()=>{
+    
     getData();
+    
   },[])
+  
   const getData = async() => {
+    
     let task = await axios.get(`http://localhost:3004/tasks/${id}`)
     console.log(task.data)
     setData(task.data);
+    
   }
   
   return (
+    
     <div className='single'>
         <h1 className='name'>{data.name}</h1>
         <div className='dates'>
@@ -27,5 +33,6 @@ export const SingleTask = () => {
         </div>
         <p>{data.desc}</p>
     </div>
+
   )
 }
